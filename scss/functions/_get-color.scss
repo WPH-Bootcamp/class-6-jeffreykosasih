@@ -8,9 +8,8 @@
   {
     @return map.has-key(map-get($colors, $type), $level);
   } @else {
-    @warn if(map.has-key($colors, $type), 
-      "Invalid color level: `#{$level}` for type `#{$type}`", 
-      "Invalid color type: `#{$type}`");
+    @warn "Invalid color level: `#{$level}` for type `#{$type}`", 
+      "Invalid color type: `#{$type}`";
     @return null;
   }
 
